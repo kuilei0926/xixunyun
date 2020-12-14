@@ -7,7 +7,7 @@ import sys
 
 # 配置开始
 
-account = "31702160115" # 账号
+account = env.NAME # 账号
 password = "160115" # 密码
 school_id = "924" # 学校ID
 # 关于学校ID
