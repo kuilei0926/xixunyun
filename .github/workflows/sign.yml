@@ -26,4 +26,4 @@ jobs:
     - name: '运行 【签到】'
       run: |
         cd ~/xixunyun
-        ./xixunyun.py
+        python xixunyun.py
