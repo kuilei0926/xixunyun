@@ -25,4 +25,5 @@ jobs:
         git clone https://github.com/kuilei0926/xixunyun.git ~/xixunyun
     - name: '运行 【签到】'
       run: |
-        xixunyun.py
+        cd /home/runner/xixunyun
+        ./xixunyun.py
