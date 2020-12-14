@@ -34,3 +34,8 @@ jobs:
           SIGN_GPS:  ${{ secrets.SIGN_GPS }}
           LATITUDE:  ${{ secrets.LATITUDE }}
           LONGITUDE:  ${{ secrets.LONGITUDE }}
+          MODEL:  ${{ secrets.MODEL }}
+          REMARK_NAME:  ${{ secrets.REMARK_NAME }}
+          SYSTEM:  ${{ secrets.SYSTEM }}
+          APP_VERSION:  ${{ secrets.APP_VERSION }}
+          UUID:  ${{ secrets.UUID }}  
