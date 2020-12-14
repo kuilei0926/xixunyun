@@ -5,7 +5,8 @@ name: 签到
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - master
   schedule:
     - cron: 15 4/12 * * *
 
