@@ -7,7 +7,9 @@ import sys
 import os
 
 # 配置开始
-account = str(os.environ["NAME"]) # 账号
+account = os.environ["NAME"] # 账号
+print ("os.environ["NAME"]")
+print ("account")
 password = "160115" # 密码
 school_id = "924" # 学校ID
 # 关于学校ID
