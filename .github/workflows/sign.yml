@@ -28,4 +28,4 @@ jobs:
         cd ~/xixunyun
         python xixunyun.py
     env:
-          name: ${{ secrets.name }}
+          name: ${{ secrets.NAME }}
