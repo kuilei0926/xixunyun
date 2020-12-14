@@ -8,7 +8,6 @@ import os
 
 # 配置开始
 account = os.environ["NAME"] # 账号
-print (account)
 password = "160115" # 密码
 school_id = "924" # 学校ID
 # 关于学校ID
@@ -123,7 +122,7 @@ if accountpage["code"]==20000: # 成功
     msg += '班级：' + accountpage["data"]["class_name"] + '\n'
     msg += '入学年份：' + accountpage["data"]["entrance_year"] + '\n'
     msg += '绑定手机号：' + accountpage["data"]["bind_phone"] + '\n'
-    msg += '登录令牌：' + accountpage["data"]["token"] + '\n'
+    msg += '登录令牌：' + accountpage["data"]["token"] + ']\n'
     if no_wait==0:
         msg += '请确认账户没错哦~\n'
     
