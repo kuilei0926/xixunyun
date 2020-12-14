@@ -28,4 +28,4 @@ jobs:
         cd ~/xixunyun
         python xixunyun.py
     env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
+          name: ${{ secrets.name }}
