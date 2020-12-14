@@ -4,6 +4,7 @@ from urllib import parse
 import json
 import time
 import sys
+import os
 
 # 配置开始
 if __name__ == '__main__':
