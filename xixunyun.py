@@ -163,7 +163,7 @@ if accountpage["code"]==20000: # 成功
             print(msg)
             exit()
         signactdata_origin = {"change_sign_resource":"0","longitude":longitude,"latitude":latitude,"comment":"","remark":remark,"address":(regeopage["regeocode"]["addressComponent"]["province"]+regeopage["regeocode"]["addressComponent"]["city"]+regeopage["regeocode"]["addressComponent"]["district"]),"address_name":regeopage["regeocode"]["formatted_address"]}
-        msg += '开始组合数据包：' + str(signactdata_origin) + '\n'
+        msg += '开始组合数据包：' + signactdata_origin + '\n'
         if no_wait==0:
             msg += '数据包没错哦~（其实只是让开发者确认啦）\n'
             
