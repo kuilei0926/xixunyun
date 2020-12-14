@@ -32,9 +32,9 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Checkout
-        run: |
-          git clone https://github.com/kuilei0926/xixunyun.git ~/xixunyun
+      run: |
+        git clone https://github.com/kuilei0926/xixunyun.git ~/xixunyun
     - name: '运行 【签到】'
-        run: |
-          cd ~/xixunyun
-          xixunyun.py
+      run: |
+        cd ~/xixunyun
+        xixunyun.py
