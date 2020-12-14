@@ -31,3 +31,4 @@ jobs:
           ACCOUNT: ${{ secrets.ACCOUNT }}
           PASSWORD: ${{ secrets.PASSWORD }}
           SCHOOL_ID: ${{ secrets.SCHOOL_ID }}
+          SIGN_GPS:  ${{ secrets.SIGN_GPS }}
