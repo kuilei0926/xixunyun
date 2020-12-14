@@ -6,7 +6,7 @@ import time
 import sys
 
 # 配置开始
-global N
+global NAME
 account = NAME # 账号
 password = "160115" # 密码
 school_id = "924" # 学校ID
