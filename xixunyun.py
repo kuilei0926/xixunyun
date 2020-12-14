@@ -30,7 +30,7 @@ no_wait = 0 # 是否不等待直接完成（将取消获取真实位置信息功
 system = os.environ["SYSTEM"] 
 if system == 11:
     system = "10" # 模拟Android版本号
-else：
+else:
     system = os.environ["SYSTEM"] # 模拟Android版本号
 
 model = "Xiaomi 10" # 模拟机型
