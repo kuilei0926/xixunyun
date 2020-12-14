@@ -34,8 +34,8 @@ uuid = "00:00:00:00:00:00" # 模拟UUID
 
 # 配置结束
 
-longitude = (str)(sign_gps[0]) # 经度
-latitude = (str)(sign_gps[1]) # 纬度
+longitude = (str)(os.environ["LONGITUDE"]) # 经度
+latitude = (str)(os.environ["LATITUDE"]) # 纬度
 
 def isset(v): 
     try : 
