@@ -5,10 +5,9 @@ name: 签到
 
 on:
   push:
-    branches:
-      - master
-  schedule:
-    - cron: 15 4/12 * * *
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
