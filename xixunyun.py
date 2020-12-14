@@ -9,6 +9,7 @@ import os
 # 配置开始
 if __name__ == '__main__':
     NAME = os.environ["NAME"]
+
 account = NAME # 账号
 password = "160115" # 密码
 school_id = "924" # 学校ID
