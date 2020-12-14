@@ -7,9 +7,9 @@ import sys
 import os
 
 # 配置开始
-account = os.environ["account"] # 账号
-password = os.environ["password"] # 密码
-school_id = os.environ["school_id"] # 学校ID
+account = os.environ["ACCOUNT"] # 账号
+password = os.environ["PASSWORD"] # 密码
+school_id = os.environ["SCHOOL_ID"] # 学校ID
 # 关于学校ID
 # 可以前往 https://api.xixunyun.com/login/schoolmap 查询，比如茂名职业技术学院ID为924（截止20201213）
 
@@ -25,7 +25,7 @@ sign_gps = [113.270948,23.130643] # 签到坐标（注意小数点取后6位）
 
 comment = "" # 签到说明（如需换行请使用\\n，如需输入"\"斜杠请使用"\\"，以上仅为猜测，作者没用过）
 
-no_wait = 0 # 是否不等待直接完成（将取消获取真实位置信息功能，实训云会报告“位置区域”），0：等待，1：不等待
+no_wait = 0 # 是否不等待直接完成（将取消获取真实位置信息功能，习训云会报告“位置区域”），0：等待，1：不等待
 
 system = "11" # 模拟Android版本号
 model = "Xiaomi 10" # 模拟机型
