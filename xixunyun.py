@@ -18,7 +18,7 @@ remark_name = "上班" # 签到类型（现已只需填写汉字类型）
 # 请注意此类型可能会变更
 # 0：上班 1：外出 2：假期 3：请假 4：轮岗 5：回校 6：外宿 7：在家 8：下班 9：学习 10：毕业设计 11：补签
 
-sign_gps = [113.270948,23.130643] # 签到坐标（注意小数点取后6位）
+sign_gps = [os.environ["SIGN_GPS"]] # 签到坐标（注意小数点取后6位）
 # 关于如何获取坐标
 # 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
 # 每家坐标拾取器标准不同，本脚本采用XY轴坐标格式。例如北京[116.000000,40.000000]
@@ -84,7 +84,7 @@ if no_wait==0:
         except Exception as e:
             msg += '出现异常-->'+str(e) +'\n'
 
-    msg += '你将会用账号' + account + '在' + regeopage["regeocode"]["formatted_address"] + '（经度：' + longitude + '，纬度' + latitude+'）以' + remark_name + '进行签到。(｀・ω・´)\n'
+    msg += '你将会用你的账号在' + regeopage["regeocode"]["formatted_address"] + '（经度：' + longitude + '，纬度' + latitude+'）以' + remark_name + '进行签到。(｀・ω・´)\n'
     msg += '请确认一下哦~\n'
     
     regeopage = {"status":"1","info":"OK","infocode":"10000","regeocode":{"formatted_address":[],"addressComponent":{"country":[],"province":[],"city":[],"citycode":[],"district":[],"adcode":[],"township":[],"towncode":[],"streetNumber":{"street":[],"number":[],"location":"0,0","direction":[],"distance":[]}}}}
@@ -118,7 +118,6 @@ if accountpage["code"]==20000: # 成功
     msg += '你好' + accountpage["data"]["user_name"] + '！(/・ω・)/\n'
     msg += '目前你的积分为' + str(accountpage["data"]["point"]) + '分，全校排名第' + str(accountpage["data"]["point_rank"]) + '位\n'
     msg += '姓名：' + accountpage["data"]["user_name"] + '\n'
-    msg += '学号：' + accountpage["data"]["user_number"] + '\n'
     msg += '班级：' + accountpage["data"]["class_name"] + '\n'
     msg += '入学年份：' + accountpage["data"]["entrance_year"] + '\n'
     msg += '绑定手机号：' + accountpage["data"]["bind_phone"] + '\n'
