@@ -66,13 +66,11 @@ def get_remark(var):
         11: "补签",
     }.get(var,"未知类型")
 msg = ""
-msg += '嘀~嘀~\n'
 
 if account=="" or account=="" or school_id=="" or len(sign_gps)!=2:
     msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
     exit(1)
 
-msg += '嗯嗯。\n'
 msg += '我来看一下~\n'
 
 if no_wait==0:
