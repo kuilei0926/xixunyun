@@ -17,11 +17,6 @@ sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
 # 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
 # 每家坐标拾取器标准不同，本脚本采用XY轴坐标格式。例如北京[116.000000,40.000000]
 
-if account=="" or account=="" or school_id=="" or sign_gps=="":
-    msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
-    print(msg)
-    exit(1)
-
 # 关于学校ID
 # 可以前往 https://api.xixunyun.com/login/schoolmap 查询，比如茂名职业技术学院ID为924（截止20201213）
 
@@ -80,6 +75,11 @@ def get_remark(var):
     }.get(var,"未知类型")
 
 msg += '我来看一下~\n'
+
+if account=="" or account=="" or school_id=="" or sign_gps=="":
+    msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
+    print(msg)
+    exit(1)
 
 if no_wait==0:
     for i in range(1,100):
