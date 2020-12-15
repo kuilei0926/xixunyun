@@ -8,7 +8,7 @@ import os
 
 # 配置开始
 user = "31702160115 160115 924"
-account = user.split( )[0] # 账号
+account = user.split( )[0] # 账号1
 password = user.split( )[1] # 密码
 school_id = user.split( )[2] # 学校ID
 
