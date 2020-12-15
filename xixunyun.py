@@ -92,7 +92,8 @@ if no_wait==0:
     msg += '你将会用你的账号在' + regeopage["regeocode"]["formatted_address"] + '（经度：' + longitude + '，纬度' + latitude+'）以' + remark_name + '进行签到。(｀・ω・´)\n'
     msg += '请确认一下哦~\n'
 else:
-    regeopage = {"status":"1","info":"OK","infocode":"10000","regeocode":{"formatted_address":[],"addressComponent":{"country":[],"province":[],"city":[],"citycode":[],"district":[],"adcode":[],"towncode":[],"streetNumber":{"street":[],"number":[],"location":"0,0","direction":[],"distance":[]}}}}
+    regeopage = {"status":"1","info":"OK","infocode":"10000","regeocode":{"formatted_address":[],"addressComponent":{"country":[],"province":[],"city":[],"citycode":[],"district":[],"adcode":[],"township":[],"towncode":[],"streetNumber":{"street":[],"number":[],"location":"0,0","direction":[],"distance":[]}}}}
+    print("你将会用账号",account,"在经度：",longitude,"，纬度"+latitude+"以",remark_name,"进行签到。(｀・ω・´)")
     msg += '你将会用账号' + account + '在经度：' + longitude + '，纬度' + latitude + '以' + remark_name + '进行签到。(｀・ω・´)\n'
 msg += '我们来登录吧！\n'
 
