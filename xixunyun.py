@@ -19,7 +19,6 @@ sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
 
 if account=="" or account=="" or school_id=="" or sign_gps=="":
     msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
-    print(msg)
     exit(1)
     
 # 关于学校ID
