@@ -11,6 +11,8 @@ user = "31702160115 160115 924"
 account = user.split( )[0] # 账号
 password = user.split( )[1] # 密码
 school_id = user.split( )[2] # 学校ID
+
+print (account + "\n" + password + "\n" + school_id)
 # 关于学校ID
 # 可以前往 https://api.xixunyun.com/login/schoolmap 查询，比如茂名职业技术学院ID为924（截止20201213）
 
@@ -35,13 +37,12 @@ model = set.split( )[1] # 模拟机型
 app_version = set.split( )[2] # 模拟App版本号
 uuid =set.split( )[3] # 模拟UUID
 
-print (sign_gps)
 # 配置结束
 longitude = sign_gps.split(",")[0] # 经度
 latitude = sign_gps.split(",")[1] # 纬度
 
-print (longitude)
-print (latitude)
+print (sign_gps + "\n" + longitude + "\n" + latitude)
+
 def isset(v): 
     try : 
         type (eval(v)) 
