@@ -35,7 +35,7 @@ uuid =os.environ["UUID"] # 模拟UUIDD
 if len(system) == 0:
   print ("未设置system，使用默认")
   system = "11"
-  pprint ("设置为,system：") + system
+  print ("设置为,system：") + system
 else:
   print ("已设置,system：") + system
 # 配置结束
