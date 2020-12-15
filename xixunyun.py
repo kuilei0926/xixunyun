@@ -68,7 +68,7 @@ def get_remark(var):
     }.get(var,"未知类型")
 msg = ""
 
-if account=="" or account=="" or school_id=="" or len(sign_gps)!=2:
+if account=="" or account=="" or school_id=="" or sign_gps=="":
     msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
     print(msg)
     exit(1)
