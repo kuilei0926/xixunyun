@@ -33,9 +33,9 @@ app_version = os.environ["APP_VERSION"] # 模拟App版本号
 uuid =os.environ["UUID"] # 模拟UUIDD
 
 if len(system) == 0:
-  print '字符串system为空串'
+  print ("字符串system为空串")
 else:
-  print '字符串system不是空串,TEST1：' + system
+  print ("字符串system不是空串,system：") + system
 # 配置结束
 
 longitude = (str)(os.environ["LONGITUDE"]) # 经度
