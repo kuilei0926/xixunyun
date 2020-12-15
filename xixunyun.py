@@ -161,7 +161,7 @@ if accountpage["code"]==20000: # 成功
             msg += '没有找到类型数据，请确认是否配置正确（可以参考输出日志中的“服务器返回签到类型数据”部分）\n'
             print(msg)
             exit()
-        print (regeopage["regeocode"]["addressComponent)
+        print (regeopage["regeocode"]["addressComponent"]["province"])
         signactdata_origin = {"change_sign_resource":"0","longitude":longitude,"latitude":latitude,"comment":"","remark":remark,"address":(regeopage["regeocode"]["addressComponent"]["province"]+regeopage["regeocode"]["addressComponent"]["city"]+regeopage["regeocode"]["addressComponent"]["district"]),"address_name":regeopage["regeocode"]["formatted_address"]}
         print("开始组合数据包：",signactdata_origin)
         if no_wait==0:
