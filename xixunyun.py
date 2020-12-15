@@ -7,8 +7,9 @@ import sys
 import os
 
 # 配置开始
-account = os.environ["ACCOUNT"] # 账号
-password = os.environ["PASSWORD"] # 密码
+user = os.environ["ACCOUNT"] 
+account = user.split( )[1] # 账号
+password = user.split( )[2] # 密码
 school_id = os.environ["SCHOOL_ID"] # 学校ID
 # 关于学校ID
 # 可以前往 https://api.xixunyun.com/login/schoolmap 查询，比如茂名职业技术学院ID为924（截止20201213）
