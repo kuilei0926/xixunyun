@@ -12,6 +12,16 @@ account = user.split( )[0] # 账号1
 password = user.split( )[1] # 密码
 school_id = user.split( )[2] # 学校ID
 
+sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
+# 关于如何获取坐标
+# 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
+# 每家坐标拾取器标准不同，本脚本采用XY轴坐标格式。例如北京[116.000000,40.000000]
+
+if account=="" or account=="" or school_id=="" or sign_gps=="":
+    msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
+    print(msg)
+    exit(1)
+
 # 关于学校ID
 # 可以前往 https://api.xixunyun.com/login/schoolmap 查询，比如茂名职业技术学院ID为924（截止20201213）
 
@@ -20,11 +30,6 @@ remark_name = "假期" # 签到类型（现已只需填写汉字类型）
 # 请注意此类型可能会变更
 # 0：上班 1：外出 2：假期 3：请假 4：轮岗 5：回校 6：外宿 7：在家 8：下班 9：学习 10：毕业设计 11：补签
 
-sign_gps = "113.270948,23.130643"  # 签到坐标（注意小数点取后6位）
-# 关于如何获取坐标
-# 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
-# 每家坐标拾取器标准不同，本脚本采用XY轴坐标格式。例如北京[116.000000,40.000000]
-
 comment = "" # 签到说明（如需换行请使用\\n，如需输入"\"斜杠请使用"\\"，以上仅为猜测，作者没用过）
 
 no_wait = 0 # 是否不等待直接完成（将取消获取真实位置信息功能，习训云会报告“位置区域”），0：等待，1：不等待
@@ -32,21 +37,19 @@ no_wait = 0 # 是否不等待直接完成（将取消获取真实位置信息功
 set = "11 Xiaomi10 4.4.7 00:00:00:00:00:00"
 if len(set) == 0:
     system = "11" # 模拟Android版本号
-    model = "Xiaomi 10" # 模拟机型
     app_version = "4.4.7"[2] # 模拟App版本号
     uuid = "00:00:00:00:00:00" # 模拟UUID
 else:
     system = set.split( )[0] # 模拟Android版本号
-    model = set.split( )[1] # 模拟机型
     app_version = set.split( )[2] # 模拟App版本号
     uuid =set.split( )[3] # 模拟UUID
 
-system = set.split( )[0] # 模拟Android版本号
-model = set.split( )[1] # 模拟机型
-app_version = set.split( )[2] # 模拟App版本号
-uuid =set.split( )[3] # 模拟UUID
-
 # 配置结束
+if len(model) == 0:
+    model = "Xiaomi 11"] # 模拟机型
+else:
+    model = set.split( )[1] # 模拟机型
+print (model)
 longitude = sign_gps.split(",")[0] # 经度
 latitude = sign_gps.split(",")[1] # 纬度
 
@@ -75,12 +78,6 @@ def get_remark(var):
         10: "毕业设计",
         11: "补签",
     }.get(var,"未知类型")
-msg = ""
-
-if account=="" or account=="" or school_id=="" or sign_gps=="":
-    msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
-    print(msg)
-    exit(1)
 
 msg += '我来看一下~\n'
 
@@ -179,8 +176,10 @@ if accountpage["code"]==20000: # 成功
             msg += '数据包没错哦~（其实只是让开发者确认啦）\n'
             
         msg += 'Biu~那么我们就开始吧！\n'
+        
         print(msg)
         exit()
+        
         for i in range(1,100):
             try:
                 # 签到
