@@ -47,7 +47,6 @@ else:
 model = os.environ["MODEL"]
 if len(model) == 0:
     model = "Xiaomi 10" # 模拟机型
-else:
     
 longitude = sign_gps.split(",")[0] # 经度
 latitude = sign_gps.split(",")[1] # 纬度
