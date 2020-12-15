@@ -32,11 +32,8 @@ model = os.environ["MODEL"] # 模拟机型
 app_version = os.environ["APP_VERSION"] # 模拟App版本号
 uuid =os.environ["UUID"] # 模拟UUIDD
 
-if len(system) == 0:
-  print ("未设置system，使用默认")
-  system = "11"
-else:
-  print ("已设置,system：") + system
+print （account+password+school_id+system+model+app_version+uuid）
+
 # 配置结束
 
 longitude = (str)(os.environ["LONGITUDE"]) # 经度
