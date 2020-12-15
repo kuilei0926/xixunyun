@@ -35,8 +35,8 @@ uuid =os.environ["UUID"] # 模拟UUIDD
 
 
 # 配置结束
-longitude = sign_gps.split(,)[0] # 经度
-latitude = sign_gps.split(,)[1] # 纬度
+longitude = sign_gps.split(",")[0] # 经度
+latitude = sign_gps.split(",")[1] # 纬度
 
 
 def isset(v): 
