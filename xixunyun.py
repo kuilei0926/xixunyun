@@ -33,11 +33,11 @@ app_version = os.environ["APP_VERSION"] # 模拟App版本号
 uuid =os.environ["UUID"] # 模拟UUIDD
 
 if len(system) == 0:
-  print ("字符串system为空串")
+  print ("未设置system，使用默认")
   system = "11"
-  print (system)
+  pprint ("设置为,system：") + system
 else:
-  print ("字符串system不是空串,system：") + system
+  print ("已设置,system：") + system
 # 配置结束
 
 longitude = (str)(os.environ["LONGITUDE"]) # 经度
