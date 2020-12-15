@@ -34,7 +34,7 @@ uuid =os.environ["UUID"] # 模拟UUIDD
 
 print (account.split( ))
 
-# 配置结束
+# 配置结束0
 
 longitude = (str)(os.environ["LONGITUDE"]) # 经度
 latitude = (str)(os.environ["LATITUDE"]) # 纬度
