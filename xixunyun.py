@@ -27,18 +27,11 @@ comment = "" # 签到说明（如需换行请使用\\n，如需输入"\"斜杠�
 
 no_wait = 0 # 是否不等待直接完成（将取消获取真实位置信息功能，习训云会报告“位置区域”），0：等待，1：不等待
 
-system = os.environ["SYSTEM"] 
-if system == "":
-    system = "11" # 模拟Android版本号
-else:
+system = os.environ["SYSTEM"] # 模拟Android版本号
+model = os.environ["model"] # 模拟机型
+app_version = os.environ["app_version"] # 模拟App版本号
+uuid =os.environ["uuid"] # 模拟UUID
 
-model = os.environ["model"] 
-if model == "":
-    model = "Xiaomi 10" # 模拟机型
-else:
-  
-app_version = "4.4.7" # 模拟App版本号
-uuid = "00:00:00:00:00:00" # 模拟UUID
 
 # 配置结束
 
