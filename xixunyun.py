@@ -177,7 +177,7 @@ if accountpage["code"]==20000: # 成功
                 signactpage = request.urlopen(req, timeout=10).read()
                 signactpage = signactpage.decode('utf-8')
                 signactpage = json.loads(signactpage)
-                # print(signactpage)
+                print(signactpage)
                 """ 
                 数据样例（20181215）
                 {
