@@ -33,12 +33,12 @@ model = os.environ["MODEL"] # 模拟机型
 app_version = os.environ["APP_VERSION"] # 模拟App版本号
 uuid =os.environ["UUID"] # 模拟UUIDD
 
-
+print (sign_gps)
 # 配置结束
 longitude = sign_gps.split(",")[0] # 经度
 latitude = sign_gps.split(",")[1] # 纬度
 
-
+print (longitude)
 def isset(v): 
     try : 
         type (eval(v)) 
