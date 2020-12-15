@@ -46,7 +46,7 @@ else:
 
 # 配置结束
 if len(model) == 0:
-    model = "Xiaomi 11"] # 模拟机型
+    model = "Xiaomi 11" # 模拟机型
 else:
     model = set.split( )[1] # 模拟机型
 print (model)
