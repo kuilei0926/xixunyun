@@ -32,7 +32,7 @@ model = os.environ["model"] # 模拟机型
 app_version = os.environ["app_version"] # 模拟App版本号
 uuid =os.environ["uuid"] # 模拟UUID
 
-if system == NULL;
+if system == None;
   print('hi zs') 
 
 # 配置结束
