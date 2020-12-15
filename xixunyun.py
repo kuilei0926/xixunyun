@@ -92,10 +92,10 @@ if no_wait==0:
     msg += '你将会用你的账号在' + regeopage["regeocode"]["formatted_address"] + '（经度：' + longitude + '，纬度' + latitude+'）以' + remark_name + '进行签到。(｀・ω・´)\n'
     msg += '请确认一下哦~\n'
     for i in range(6):
-            sys.stdout.write('\r')
-            sys.stdout.write("你可以在 %s 秒之内按 Ctrl+C 组合键退出~ " %(int(5-i)))
-            sys.stdout.flush()
-            time.sleep(1)
+        sys.stdout.write('\r')
+        sys.stdout.write("你可以在 %s 秒之内按 Ctrl+C 组合键退出~ " %(int(5-i)))
+        sys.stdout.flush()
+        time.sleep(1)
         sys.stdout.write('\n')
     else:
         regeopage = {"status":"1","info":"OK","infocode":"10000","regeocode":{"formatted_address":[],"addressComponent":{"country":[],"province":[],"city":[],"citycode":[],"district":[],"adcode":[],"township":[],"towncode":[],"streetNumber":{"street":[],"number":[],"location":"0,0","direction":[],"distance":[]}}}}
