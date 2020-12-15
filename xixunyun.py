@@ -34,6 +34,8 @@ uuid =os.environ["UUID"] # 模拟UUIDD
 
 if len(system) == 0:
   print ("字符串system为空串")
+  system = "11"
+  print (system)
 else:
   print ("字符串system不是空串,system：") + system
 # 配置结束
