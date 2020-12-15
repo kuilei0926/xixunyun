@@ -28,9 +28,7 @@ jobs:
         cd ~/xixunyun
         python xixunyun.py
     env:
-          ACCOUNT: ${{ secrets.ACCOUNT }}
-          PASSWORD: ${{ secrets.PASSWORD }}
-          SCHOOL_ID: ${{ secrets.SCHOOL_ID }}
+          ACCOUNT: ${{ secrets.USER }}
           SIGN_GPS:  ${{ secrets.SIGN_GPS }}
           LATITUDE:  ${{ secrets.LATITUDE }}
           LONGITUDE:  ${{ secrets.LONGITUDE }}
