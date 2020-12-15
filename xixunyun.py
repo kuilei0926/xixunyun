@@ -33,7 +33,7 @@ comment = "" # 签到说明（如需换行请使用\\n，如需输入"\"斜杠�
 
 no_wait = 0 # 是否不等待直接完成（将取消获取真实位置信息功能，习训云会报告“位置区域”），0：等待，1：不等待
 
-set = "11 Xiaomi10 4.4.7 00:00:00:00:00:00"
+set = os.environ["SET"]
 if len(set) == 0:
     system = "11" # 模拟Android版本号
     app_version = "4.4.7"[2] # 模拟App版本号
@@ -46,10 +46,9 @@ else:
 # 配置结束
 model = os.environ["MODEL"]
 if len(model) == 0:
-    model = "Xiaomi 11" # 模拟机型
+    model = "Xiaomi 10" # 模拟机型
 else:
-    model = set.split( )[1] # 模拟机型
-print (model)
+    
 longitude = sign_gps.split(",")[0] # 经度
 latitude = sign_gps.split(",")[1] # 纬度
 
