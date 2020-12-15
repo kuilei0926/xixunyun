@@ -31,7 +31,7 @@ no_wait = 0 # 是否不等待直接完成（将取消获取真实位置信息功
 system = os.environ["SYSTEM"] # 模拟Android版本号
 model = os.environ["MODEL"] # 模拟机型
 app_version = os.environ["APP_VERSION"] # 模拟App版本号
-uuid =os.environ["UUID"] # 模拟UUIDD
+uuid =os.environ["UUID"] # 模拟UUID
 
 print (sign_gps)
 # 配置结束
@@ -67,6 +67,7 @@ msg = ""
 
 if account=="" or account=="" or school_id=="" or len(sign_gps)!=2:
     msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
+    print(msg)
     exit(1)
 
 msg += '我来看一下~\n'
