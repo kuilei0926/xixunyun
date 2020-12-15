@@ -32,7 +32,7 @@ model = os.environ["MODEL"] # 模拟机型
 app_version = os.environ["APP_VERSION"] # 模拟App版本号
 uuid =os.environ["UUID"] # 模拟UUIDD
 
-print （account）+ "\n" + （password）+ "\n" + （school_id）+ "\n" + （system）+ "\n" + （model）+ "\n" + （app_version）+ "\n" + （uuid）
+print （str（account））
 
 # 配置结束
 
