@@ -6,7 +6,7 @@ import time
 import sys
 import os
 
-# 配置开始4
+# 配置开始
 account = os.environ["ACCOUNT"] # 账号
 password = os.environ["PASSWORD"] # 密码
 school_id = os.environ["SCHOOL_ID"] # 学校ID
