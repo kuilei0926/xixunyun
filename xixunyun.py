@@ -179,6 +179,8 @@ if accountpage["code"]==20000: # 成功
             msg += '数据包没错哦~（其实只是让开发者确认啦）\n'
             
         msg += 'Biu~那么我们就开始吧！\n'
+        print(msg)
+            exit()
         for i in range(1,100):
             try:
                 # 签到
