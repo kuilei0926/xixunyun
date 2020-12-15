@@ -78,7 +78,7 @@ def get_remark(var):
         10: "毕业设计",
         11: "补签",
     }.get(var,"未知类型")
-
+msg = ""
 msg += '我来看一下~\n'
 
 
