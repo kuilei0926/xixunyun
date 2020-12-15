@@ -35,7 +35,7 @@ uuid =os.environ["UUID"] # 模拟UUIDD
 if system == None:
   print('hi zs') 
 else:
-  print('hi') 
+  print(system) 
 # 配置结束
 
 longitude = (str)(os.environ["LONGITUDE"]) # 经度
