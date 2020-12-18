@@ -1,13 +1,19 @@
 import base64
 import rsa
-import os
 
+sign_gps = [123.456,123.456]  # 签到坐标（注意小数点取后6位）
 
+# 关于如何获取坐标
+# 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
+# 每家坐标拾取器标准不同，本脚本采用XY轴坐标格式。例如北京[116.000000,40.000000]
 class HandleSign:
     # 定义服务器公钥, 往往可以存放在公钥文件中
     server_pub = """
         -----BEGIN PUBLIC KEY-----
-        MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDlYsiV3DsG+t8OFMLyhdmG2P2J4GJwmwb1rKKcDZmTxEphPiYTeFIg4IFEiqDCATAPHs8UHypphZTK6LlzANyTzl9LjQS6BYVQk81LhQ29dxyrXgwkRw9RdWaMPtcXRD4h6ovx6FQjwQlBM5vaHaJOHhEorHOSyd/deTvcS+hRSQIDAQAB
+        MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDQENQujkLfZfc5Tu9Z1LprzedE
+        O3F7gs+7bzrgPsMl29LemonPYvIG8C604CprLittlenJpnhWu2lGirlWZyLq6sBr
+        tuPorOc42+gInFfyhJAwdZB6Sqlove7bW+jNe5youDtU7very6Gx+muchGo8Dg+S
+        kKlZFc8Br7SHtbL2tQIDAQAB
         -----END PUBLIC KEY-----
         """
 
@@ -44,8 +50,10 @@ class HandleSign:
 
 if __name__ == '__main__':
     # 待加密字符串或者字节
+    longitude = "123.123" # 经度
+    latitude = "456.456" # 纬度
     # 调用to_encrypt类方法来进行加密
-    cryto_info = HandleSign.to_encrypt(longitude)
-    cryto_info = HandleSign.to_encrypt(latitude)
+    longitude = HandleSign.to_encrypt(longitude)
+    latitude = HandleSign.to_encrypt(latitude)
     print(longitude)
     print(latitude)
