@@ -60,10 +60,10 @@ class HandleSign:
 
 if __name__ == '__main__':
     # 调用to_encrypt类方法来进行加密
-    longitude = HandleSign.to_encrypt(longitude)
-    latitude = HandleSign.to_encrypt(latitude)
-    print(longitude)
-    print(latitude)
+    longitudersa = HandleSign.to_encrypt(longitude)
+    latitudersa = HandleSign.to_encrypt(latitude)
+    print(longitudersa)
+    print(latitudersa)
 # 配置开始
 user = os.environ["USER"]
 account = user.split( )[0] # 账号1
