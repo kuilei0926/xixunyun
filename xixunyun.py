@@ -29,7 +29,7 @@ no_wait = 0 # 是否不等待直接完成（将取消获取真实位置信息功
 set = os.environ["SET"]
 if len(set) == 0:
     system = "11" # 模拟Android版本号
-    app_version = "4.4.7"[2] # 模拟App版本号
+    app_version = "4.4.7" # 模拟App版本号
     uuid = "00:00:00:00:00:00" # 模拟UUID
 else:
     system = set.split( )[0] # 模拟Android版本号
@@ -37,6 +37,8 @@ else:
     uuid =set.split( )[3] # 模拟UUID
 # 配置结束
 model = os.environ["MODEL"]
+if len(model) == 0:
+    model = "Xiaomi 10" # 模拟机型
 
 longitude = sign_gps.split(",")[0] # 经度
 latitude = sign_gps.split(",")[1] # 纬度
