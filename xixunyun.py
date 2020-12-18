@@ -9,8 +9,9 @@ import base64
 import rsa
 
 sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
-longitude = sign_gps.split(",")[0] # 经度
-latitude = sign_gps.split(",")[1] # 纬度
+# longitude = sign_gps.split(",")[0] # 经度
+longitude = "123.456" # 经度
+latitude = "456.123" # 纬度
 print(longitude)
 print(latitude)
 # 关于如何获取坐标
