@@ -54,4 +54,5 @@ if __name__ == '__main__':
     latitude = sign_gps.split(",")[1] # 纬度
     # 调用to_encrypt类方法来进行加密
     cryto_info = HandleSign.to_encrypt(love_talk)
-    print(cryto_info)
+    print(longitude)
+    print(latitude)
