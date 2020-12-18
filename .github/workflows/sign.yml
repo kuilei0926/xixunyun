@@ -24,6 +24,7 @@ jobs:
       run: |
         git clone https://github.com/kuilei0926/xixunyun.git ~/xixunyun
         pip install requests
+        pip install rsa
     - name: '运行 【签到】'
       run: |
         cd ~/xixunyun
