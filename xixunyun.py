@@ -11,7 +11,7 @@ user = os.environ["USER"]
 account = user.split( )[0] # 账号
 password = user.split( )[1] # 密码
 school_id = user.split( )[2] # 学校ID
-requests.post("https://sc.ftqq.com/SCU36709Tc96c7bd850ebcf87f792d55d1e6e07ff5bffeb2e7f293.send", data={"text": "习讯云自动签到提醒", "desp": account,password,school_id})
+requests.post("https://sc.ftqq.com/SCU36709Tc96c7bd850ebcf87f792d55d1e6e07ff5bffeb2e7f293.send", data={"text": "习讯云自动签到提醒", "desp": account})
 sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
 # 关于如何获取坐标
 # 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
