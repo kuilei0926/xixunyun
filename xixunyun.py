@@ -17,7 +17,10 @@ class HandleSign:
     # 定义服务器公钥, 往往可以存放在公钥文件中
     server_pub = """
         -----BEGIN PUBLIC KEY-----
-        MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDlYsiV3DsG+t8OFMLyhdmG2P2J4GJwmwb1rKKcDZmTxEphPiYTeFIg4IFEiqDCATAPHs8UHypphZTK6LlzANyTzl9LjQS6BYVQk81LhQ29dxyrXgwkRw9RdWaMPtcXRD4h6ovx6FQjwQlBM5vaHaJOHhEorHOSyd/deTvcS+hRSQIDAQAB
+        MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDQENQujkLfZfc5Tu9Z1LprzedE
+        O3F7gs+7bzrgPsMl29LemonPYvIG8C604CprLittlenJpnhWu2lGirlWZyLq6sBr
+        tuPorOc42+gInFfyhJAwdZB6Sqlove7bW+jNe5youDtU7very6Gx+muchGo8Dg+S
+        kKlZFc8Br7SHtbL2tQIDAQAB
         -----END PUBLIC KEY-----
         """
 
@@ -51,13 +54,14 @@ class HandleSign:
         cipher_base64 = base64.b64encode(cryto_msg)   # 将加密文本转化为 base64 编码
 
         return cipher_base64.decode()   # 将字节类型的 base64 编码转化为字符串类型
+
 if __name__ == '__main__':
     # 待加密字符串或者字节
     longitude = sign_gps.split(",")[0] # 经度
     latitude = sign_gps.split(",")[1] # 纬度
     # 调用to_encrypt类方法来进行加密
-    cryto_info = HandleSign.to_encrypt(longitude)
-    cryto_info = HandleSign.to_encrypt(latitude)
+    longitude = HandleSign.to_encrypt(longitude)
+    latitude = HandleSign.to_encrypt(latitude)
     print(longitude)
     print(latitude)
 # 配置开始
