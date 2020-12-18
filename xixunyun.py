@@ -7,7 +7,7 @@ import sys
 import os
 # 配置开始
 user = os.environ["USER"]
-account = user.split( )[0] # 账号1
+account = user.split( )[0] # 账号
 password = user.split( )[1] # 密码
 school_id = user.split( )[2] # 学校ID
 print (account,password,school_id)
