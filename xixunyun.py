@@ -5,13 +5,11 @@ import json
 import time
 import sys
 import os
-import requests
 # 配置开始
 user = os.environ["USER"]
-account = user.split( )[0] # 账号
+account = user.split( )[0] # 账号1
 password = user.split( )[1] # 密码
 school_id = user.split( )[2] # 学校ID
-requests.post("https://sc.ftqq.com/SCU36709Tc96c7bd850ebcf87f792d55d1e6e07ff5bffeb2e7f293.send", data={"text": "习讯云自动签到提醒", "desp": password})
 sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
 # 关于如何获取坐标
 # 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
@@ -41,6 +39,7 @@ else:
 model = os.environ["MODEL"]
 if len(model) == 0:
     model = "Xiaomi 10" # 模拟机型
+
 longitude = sign_gps.split(",")[0] # 经度
 latitude = sign_gps.split(",")[1] # 纬度
 print (sign_gps + "\n" + longitude + "\n" + latitude)
