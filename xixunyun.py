@@ -35,11 +35,11 @@ else:
     system = set.split( )[0] # 模拟Android版本号
     app_version = set.split( )[2] # 模拟App版本号
     uuid =set.split( )[3] # 模拟UUID
-# 配置结束
+
 model = os.environ["MODEL"]
 if len(model) == 0:
     model = "Xiaomi 10" # 模拟机型
-
+# 配置结束
 longitude = sign_gps.split(",")[0] # 经度
 latitude = sign_gps.split(",")[1] # 纬度
 print (sign_gps + "\n" + longitude + "\n" + latitude)
