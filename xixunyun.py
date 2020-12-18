@@ -84,10 +84,14 @@ if len(model) == 0:
 # 配置结束
 longitude = sign_gps.split(",")[0] # 经度
 latitude = sign_gps.split(",")[1] # 纬度
-longitudersa = HandleSign.to_encrypt(longitude)
-latitudersa = HandleSign.to_encrypt(latitude)
-print(longitudersa)
-print(latitudersa)
+
+
+if __name__ == '__main__':
+    # 待加密字符串或者字节
+    # 调用to_encrypt类方法来进行加密
+    cryto_info = HandleSign.to_encrypt(longitude)
+    print(longitude)
+    
 def isset(v): 
     try : 
         type (eval(v)) 
