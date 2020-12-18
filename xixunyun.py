@@ -8,6 +8,11 @@ import os
 import base64
 import rsa
 
+sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
+
+# 关于如何获取坐标
+# 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
+# 每家坐标拾取器标准不同，本脚本采用XY轴坐标格式。例如北京[116.000000,40.000000]
 class HandleSign:
     # 定义服务器公钥, 往往可以存放在公钥文件中
     server_pub = """
@@ -46,16 +51,21 @@ class HandleSign:
         cipher_base64 = base64.b64encode(cryto_msg)   # 将加密文本转化为 base64 编码
 
         return cipher_base64.decode()   # 将字节类型的 base64 编码转化为字符串类型
-    
+if __name__ == '__main__':
+    # 待加密字符串或者字节
+    longitude = sign_gps.split(",")[0] # 经度
+    latitude = sign_gps.split(",")[1] # 纬度
+    # 调用to_encrypt类方法来进行加密
+    cryto_info = HandleSign.to_encrypt(longitude)
+    cryto_info = HandleSign.to_encrypt(latitude)
+    print(longitude)
+    print(latitude)
 # 配置开始
 user = os.environ["USER"]
 account = user.split( )[0] # 账号1
 password = user.split( )[1] # 密码
 school_id = user.split( )[2] # 学校ID
-sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
-# 关于如何获取坐标
-# 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
-# 每家坐标拾取器标准不同，本脚本采用XY轴坐标格式。例如北京[116.000000,40.000000]
+
 if account=="" or account=="" or school_id=="" or sign_gps=="":
     msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
     exit(1)
@@ -82,8 +92,7 @@ model = os.environ["MODEL"]
 if len(model) == 0:
     model = "Xiaomi 10" # 模拟机型
 # 配置结束
-longitude = sign_gps.split(",")[0] # 经度
-latitude = sign_gps.split(",")[1] # 纬度
+
 
 
 if __name__ == '__main__':
