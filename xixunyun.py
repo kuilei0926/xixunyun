@@ -5,8 +5,6 @@ import json
 import time
 import sys
 import os
-
-
 # 配置开始
 user = os.environ["USER"]
 account = user.split( )[0] # 账号1
@@ -16,25 +14,18 @@ sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
 # 关于如何获取坐标
 # 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
 # 每家坐标拾取器标准不同，本脚本采用XY轴坐标格式。例如北京[116.000000,40.000000]
-
-__import__('rsa')
-
 if account=="" or account=="" or school_id=="" or sign_gps=="":
     msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
     exit(1)
     
 # 关于学校ID
 # 可以前往 https://api.xixunyun.com/login/schoolmap 查询，比如茂名职业技术学院ID为924（截止20201213）
-
 remark_name = "假期" # 签到类型（现已只需填写汉字类型）
 # 关于签到类型
 # 请注意此类型可能会变更
 # 0：上班 1：外出 2：假期 3：请假 4：轮岗 5：回校 6：外宿 7：在家 8：下班 9：学习 10：毕业设计 11：补签
-
 comment = "" # 签到说明（如需换行请使用\\n，如需输入"\"斜杠请使用"\\"，以上仅为猜测，作者没用过）
-
 no_wait = 0 # 是否不等待直接完成（将取消获取真实位置信息功能，习训云会报告“位置区域”），0：等待，1：不等待
-
 set = os.environ["SET"]
 if len(set) == 0:
     system = "11" # 模拟Android版本号
@@ -44,14 +35,15 @@ else:
     system = set.split( )[0] # 模拟Android版本号
     app_version = set.split( )[2] # 模拟App版本号
     uuid =set.split( )[3] # 模拟UUID
-
 # 配置结束
 model = os.environ["MODEL"]
 if len(model) == 0:
     model = "Xiaomi 10" # 模拟机型
+else:
 
-
-
+longitude = sign_gps.split(",")[0] # 经度
+latitude = sign_gps.split(",")[1] # 纬度
+print (sign_gps + "\n" + longitude + "\n" + latitude)
 def isset(v): 
     try : 
         type (eval(v)) 
@@ -59,7 +51,6 @@ def isset(v):
         return  0 
     else : 
         return  1
-
 def get_remark(var):
     return {
         0: "上班",
@@ -77,8 +68,6 @@ def get_remark(var):
     }.get(var,"未知类型")
 msg = ""
 msg += '我来看一下~\n'
-
-
 if no_wait==0:
     for i in range(1,100):
         try:
@@ -92,7 +81,6 @@ if no_wait==0:
             break
         except Exception as e:
             msg += '出现异常-->'+str(e) +'\n'
-
     msg += '你将会用你的账号在' + regeopage["regeocode"]["formatted_address"] + '（经度：' + longitude + '，纬度' + latitude+'）以' + remark_name + '进行签到。(｀・ω・´)\n'
     msg += '请确认一下哦~\n'
 else:
@@ -100,11 +88,9 @@ else:
     print("你将会用账号",account,"在经度：",longitude,"，纬度"+latitude+"以",remark_name,"进行签到。(｀・ω・´)")
     msg += '你将会用账号' + account + '在经度：' + longitude + '，纬度' + latitude + '以' + remark_name + '进行签到。(｀・ω・´)\n'
 msg += '我们来登录吧！\n'
-
 headers = {
     # 'User-Agent':'FuckXixunyun'
 }
-
 for i in range(1,100):
     try:
         # 登录
@@ -119,7 +105,6 @@ for i in range(1,100):
         break
     except Exception as e:
         msg += '出现异常-->' + str(e) + '\n'
-
 msg += '登录状态码：' + str(accountpage["code"]) + '\n'
 msg += '登录状态：' + accountpage["message"] + '\n'
 msg += '服务器返回响应时间：' + accountpage["run_execute_time"] + '\n'
@@ -136,7 +121,6 @@ if accountpage["code"]==20000: # 成功
         msg += '请确认账户没错哦~\n'
     
     msg += '正在进入签到页面~\n'
-
     for i in range(1,100):
         try:
             # 获取签到信息(原始信息：month_date=2018-12)
@@ -147,7 +131,6 @@ if accountpage["code"]==20000: # 成功
             break
         except Exception as e:
             msg += '出现异常-->' + str(e) + '\n'
-
     msg += '进入签到页面状态码：' + str(signhomepage["code"]) + '\n'
     msg += '进入签到页面状态：' + signhomepage["message"] + '\n'
     msg += '服务器返回响应时间：' + signhomepage["run_execute_time"] + '\n'
@@ -223,4 +206,3 @@ else:
     msg += '\r\n\r\n好像登录失败了QAQ\n'
     print(msg)
     exit()
-
