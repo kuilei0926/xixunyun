@@ -6,6 +6,7 @@ import time
 import sys
 import os
 
+
 # 配置开始
 user = os.environ["USER"]
 account = user.split( )[0] # 账号1
