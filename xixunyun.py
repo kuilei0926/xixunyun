@@ -84,7 +84,10 @@ if len(model) == 0:
 # 配置结束
 longitude = sign_gps.split(",")[0] # 经度
 latitude = sign_gps.split(",")[1] # 纬度
-print (longitude + "\n" + latitude)
+longitudersa = HandleSign.to_encrypt(longitude)
+latitudersa = HandleSign.to_encrypt(latitude)
+print(longitudersa)
+print(latitudersa)
 def isset(v): 
     try : 
         type (eval(v)) 
@@ -191,10 +194,6 @@ if accountpage["code"]==20000: # 成功
             print(msg)
             exit()
         print (regeopage["regeocode"]["addressComponent"]["province"])
-        cryto_info = HandleSign.to_encrypt(longitude)
-        cryto_info = HandleSign.to_encrypt(latitude)
-        print(longitude)
-        print(latitude)
         signactdata_origin = {"change_sign_resource":"0","longitude":longitude,"latitude":latitude,"comment":"","remark":remark,"address":regeopage["regeocode"]["formatted_address"],"address_name":(regeopage["regeocode"]["addressComponent"]["province"]+regeopage["regeocode"]["addressComponent"]["city"]+regeopage["regeocode"]["addressComponent"]["district"])}
         print("开始组合数据包：",signactdata_origin)
         if no_wait==0:
