@@ -51,7 +51,6 @@ if len(model) == 0:
     model = "Xiaomi 10" # 模拟机型
 
 
-print (sign_gps + "\n" + longitude + "\n" + latitude)
 
 def isset(v): 
     try : 
