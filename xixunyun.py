@@ -10,6 +10,7 @@ user = os.environ["USER"]
 account = user.split( )[0] # 账号1
 password = user.split( )[1] # 密码
 school_id = user.split( )[2] # 学校ID
+print (account,password,school_id)
 sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
 # 关于如何获取坐标
 # 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
