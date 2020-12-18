@@ -37,8 +37,6 @@ else:
     uuid =set.split( )[3] # 模拟UUID
 # 配置结束
 model = os.environ["MODEL"]
-if len(model) == 0:
-    model = "Xiaomi 10" # 模拟机型
 
 longitude = sign_gps.split(",")[0] # 经度
 latitude = sign_gps.split(",")[1] # 纬度
