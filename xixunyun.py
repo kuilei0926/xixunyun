@@ -15,7 +15,7 @@ school_id = user.split( )[2] # 学校ID
 
 __import__('rsa')
 
-if account=="" or account=="" or school_id=="" or sign_gps=="":
+if account=="" or account=="" or school_id=="":
     msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
     exit(1)
     
