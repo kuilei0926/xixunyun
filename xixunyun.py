@@ -13,10 +13,7 @@ account = user.split( )[0] # 账号1
 password = user.split( )[1] # 密码
 school_id = user.split( )[2] # 学校ID
 
-sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
-# 关于如何获取坐标
-# 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
-# 每家坐标拾取器标准不同，本脚本采用XY轴坐标格式。例如北京[116.000000,40.000000]
+__import__('rsa')
 
 if account=="" or account=="" or school_id=="" or sign_gps=="":
     msg += '诶呀？好像你还没有配置好账号信息和签到设置呢！(>_<)\n'
@@ -48,9 +45,7 @@ else:
 model = os.environ["MODEL"]
 if len(model) == 0:
     model = "Xiaomi 10" # 模拟机型
-    
-longitude = sign_gps.split(",")[0] # 经度
-latitude = sign_gps.split(",")[1] # 纬度
+
 
 print (sign_gps + "\n" + longitude + "\n" + latitude)
 
