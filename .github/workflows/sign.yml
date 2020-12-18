@@ -28,7 +28,7 @@ jobs:
     - name: '运行 【签到】'
       run: |
         cd ~/xixunyun
-        python xixunyun.py
+        python rsa.py
     env:
           USER: ${{ secrets.USER }}
           SIGN_GPS:  ${{ secrets.SIGN_GPS }}
