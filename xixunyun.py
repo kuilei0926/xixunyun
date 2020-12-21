@@ -13,4 +13,4 @@ headers = {'Content-Type': 'application/json'}
 response = requests.post(url='http://xxy.kuileii.cn/release/xixunyun', headers=headers, data=json.dumps(data))
 signactpage = json.loads(response)
 print(signactpage)
-print(response.json)
+print(response.text)
