@@ -22,3 +22,4 @@ headers = {'Content-Type': 'application/json'}
 
 response = requests.post(url='http://xxy.kuileii.cn/release/xixunyun', headers=headers, data=json.dumps(data))
 print(response.json())
+requests.post("https://sc.ftqq.com/SCU36709Tc96c7bd850ebcf87f792d55d1e6e07ff5bffeb2e7f293.send", data={"text": "习讯云签到提醒", "desp": response.json()})
