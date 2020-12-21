@@ -31,7 +31,5 @@ jobs:
     env:
           USER: ${{ secrets.USER }}
           SIGN_GPS:  ${{ secrets.SIGN_GPS }}
-          MODEL:  ${{ secrets.MODEL }}
-          SET:  ${{ secrets.SET }}
-          REMARK_NAME:  ${{ secrets.REMARK_NAME }}
+          address_name:  ${{ secrets.address_name }}  
 
