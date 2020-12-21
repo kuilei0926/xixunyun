@@ -23,12 +23,10 @@ jobs:
     - name: Checkout
       run: |
         git clone https://github.com/kuilei0926/xixunyun.git ~/xixunyun
-        pip install requests
-        pip install rsa
     - name: '运行 【签到】'
       run: |
         cd ~/xixunyun
-        python rsa.py
+        python xixunyun.py
     env:
           USER: ${{ secrets.USER }}
           SIGN_GPS:  ${{ secrets.SIGN_GPS }}
