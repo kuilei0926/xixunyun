@@ -1,6 +1,5 @@
 import requests
 import json
-
 data = {
   "account":"31702160115",
   "password":"160115",
@@ -12,4 +11,6 @@ data = {
 headers = {'Content-Type': 'application/json'}
 
 response = requests.post(url='http://xxy.kuileii.cn/release/xixunyun', headers=headers, data=json.dumps(data))
-print （response.text)
+signactpage = json.loads(response)
+print(signactpage)
+print(response.json)
