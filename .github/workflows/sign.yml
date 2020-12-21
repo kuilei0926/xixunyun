@@ -23,6 +23,7 @@ jobs:
     - name: Checkout
       run: |
         git clone https://github.com/kuilei0926/xixunyun.git ~/xixunyun
+        pip install requests
     - name: '运行 【签到】'
       run: |
         cd ~/xixunyun
