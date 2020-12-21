@@ -31,5 +31,6 @@ jobs:
     env:
           USER: ${{ secrets.USER }}
           SIGN_GPS:  ${{ secrets.SIGN_GPS }}
-          address_name:  ${{ secrets.address_name }}  
+          ADDRESS_NAME:  ${{ secrets.ADDRESS_NAME }}  
+          SCKEY: ${{ secrets.SCKEY }}  
 
