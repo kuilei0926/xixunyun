@@ -16,7 +16,7 @@ data = {
   "school_id":school_id,
   "longitude":longitude,
   "latitude":latitude,
-  "address_name":"深圳市朗生建材有限公司"
+  "address_name":os.environ["address_name"] 
 }
 headers = {'Content-Type': 'application/json'}
 
