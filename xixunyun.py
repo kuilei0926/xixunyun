@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 
 # 配置开始
 user = os.environ["USER"]
@@ -16,8 +17,8 @@ data = {
   "account":account,
   "password":password,
   "school_id":school_id,
-  "longitude":"longitude",
-  "latitude":"latitude",
+  "longitude":longitude,
+  "latitude":latitude,
   "address_name":"深圳市朗生建材有限公司"
 }
 headers = {'Content-Type': 'application/json'}
