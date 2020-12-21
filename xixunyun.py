@@ -12,4 +12,4 @@ data = {
 headers = {'Content-Type': 'application/json'}
 
 response = requests.post(url='http://xxy.kuileii.cn/release/xixunyun', headers=headers, data=json.dumps(data))
-print json.loads('response.text)
+print json.loads(response.text)
