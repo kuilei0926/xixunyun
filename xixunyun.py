@@ -16,7 +16,7 @@ data = {
   "school_id":school_id,
   "longitude":longitude,
   "latitude":latitude,
-  "address_name":os.environ["address_name"] 
+  "address_name":os.environ["ADDRESS_NAME"] 
 }
 headers = {'Content-Type': 'application/json'}
 
