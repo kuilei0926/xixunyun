@@ -20,14 +20,12 @@
 ## 快速使用
 
 
-[无法查看图片？](https://www.clost.net/default/871.html "无法查看图片？")
-
 - Fork本项目后进入自己的仓库，点击你的仓库右上角的 Settings，找到 Secrets
     <details>
    <summary> 如何Fork本项目？</summary>
    注册或登陆您的github账号，访问<https://github.com/kuilei0926/xixunyun>进入github的本项目页面中，点击右上角的Fork按钮，如图所示。
    
-   ![Fork本项目]https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/Snipaste_2020-12-21_21-03-24.png
+   ![Fork本项目]![https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/Snipaste_2020-12-21_21-03-24.png]
    
    </details>
 -  fork后进入你自己的仓库并在setting配置您的习讯云账号信息
