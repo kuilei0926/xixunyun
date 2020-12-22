@@ -48,9 +48,16 @@
    依次添加以下所有name以及value。<br>
     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉ <br>Name:<code>USER</code><br>
 	Value：<code>填写你的习讯云账号密码和学校ID,用空格或者空行分开</code><br>
+# 关于学校ID
+# 可以前往 https://api.xixunyun.com/login/schoolmap 查询，比如山东商务职业学院ID为222
    ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>SIGN_GPS</code><br>
      Value：<code>填写签到的GPS坐标</code><br>
+     
+# 关于如何获取坐标
+# 例如[0.123456,0.123456]，先经度后纬度，可以去 https://lbs.amap.com/console/show/picker 高德取坐标，直接把结果复制到[]里即可
+# 每家坐标拾取器标准不同，本脚本采用XY轴坐标格式。例如北京[116.000000,40.000000]
+
     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>ADDRESS_NAME</code><br>
      Value：<code>签到地址名字</code><br>
@@ -110,5 +117,5 @@
 
 请一定要根据配置说明配置计划时间；防止被判定滥用。
 <br>
-由于本项目被大量fork并启动actions功能，占用github官方服务器大量资源。部分用户反映无法签到，actions功能被禁止等问题。但是大部分用户仍然正常可以使用；解决方法：1.使用使用Travis Ci运行。学业繁忙，不予教程。2.请访问http://www.yulemofang.cn/fxxy/ 但并不保证其稳定性。3.用自己的服务器运行其中的py脚本。
+由于本项目被大量fork并启动actions功能，占用github官方服务器大量资源。部分用户反映无法签到，actions功能被禁止等问题。但是大部分用户仍然正常可以使用；解决方法：1.使用使用Travis Ci运行。学业繁忙，不予教程。2.请访问我的服务器http://www.baidu.com/ 但并不保证其稳定性。3.用自己的服务器运行其中的py脚本。
 
