@@ -23,7 +23,7 @@
    <summary> 如何Fork本项目？</summary>
    注册或登陆您的github账号，访问<https://github.com/kuilei0926/xixunyun>进入github的本项目页面中，点击右上角的Fork按钮，如图所示。
    
-   ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/Snipaste_2020-12-21_21-03-24.png)
+   ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222092433.png)
    
    </details>
 -  fork后进入你自己的仓库并在setting配置您的习讯云账号信息
@@ -54,7 +54,7 @@
     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>ADDRESS_NAME</code><br>
      Value：<code>签到地址名字<br>
-     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
+    ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>SCKEY</code><br>
      Value：<code>填写你的server酱SCKEY码，以SCU开头</code>#申请地址http://sc.ftqq.com/3.version  <br>
       ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>配置完后如下图所示
@@ -68,9 +68,9 @@
    <summary> 如何随意修改README文件？</summary>
    
    1.进入你的仓库并进入code界面,点击笔字的按钮进入编写
-   ![2D6731A3F5A39D89D91B4F201F8C0B70.jpg](https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/3647386614.jpg)<br><br><br>
+    ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222095234.png)
    2.在代码框随意编写或删减以达到改变代码的效果，随后点击提交commit，当然如果可以让说明书更精美欢迎来pull
-   ![E0F2D41544BE07971A596488E7A72EAA.jpg](https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/3472948209.jpg)
+    ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222095347.png)
 
    </details>
    
@@ -78,8 +78,7 @@
    <summary> 如何查看脚本执行情况？</summary>
    注意： 为了实现某个链接/帐户访问出错时不中断程序继续尝试下一个，GitHub Actions 的状态将永远是“通过”（显示绿色的✔），请自行检查 GitHub      Actions 日志：依次点击<code>Actions</code>=><code>chaoxing</code>=><code>get_points</code>=><code>Qiandao</code>项的输出确定程序执行情况。
 	
-   ![6D6681A2A552E03AE2AEC28B4542F217.jpg][1]
-
+    ![image](https://github.com/kuilei0926/xixunyun/blob/main/img/QQ%E6%88%AA%E5%9B%BE20201222095901.png?raw=true)
    </details>
 
 
@@ -95,8 +94,7 @@
 
 
 ## 关于
-本项目基于https://github.com/mkdir700/chaoxing_auto_sign
-制作，使得脚本可以无服务器执行，并简化操作以让更多人使用。
+
 本项目遵循GNU GPLv3开源协议；并有以下条款特此说明：
 1. 请勿使用本项目进行商业用途
 1. 请勿使用本项目违反当地法规
@@ -104,9 +102,7 @@
 
 以上条款，若使用者违反，后果自行承担与作者本人无关！
 
-## 鸣谢
 
-[mkdir700](https://github.com/mkdir700)
 
 
 
@@ -114,5 +110,5 @@
 
 请一定要根据配置说明配置计划时间；防止被判定滥用。
 <br>
-由于本项目被大量fork并启动actions功能，占用github官方服务器大量资源。部分用户反映无法签到，actions功能被禁止等问题。但是大部分用户仍然正常可以使用；解决方法：1.使用使用Travis Ci运行。学业繁忙，不予教程。2.请访问我的服务器 https://cx.clost.net 但并不保证其稳定性。3.用自己的服务器运行其中的py脚本。
+由于本项目被大量fork并启动actions功能，占用github官方服务器大量资源。部分用户反映无法签到，actions功能被禁止等问题。但是大部分用户仍然正常可以使用；解决方法：1.使用使用Travis Ci运行。学业繁忙，不予教程。2.请访问我的服务器 http://www.yulemofang.cn/fxxy/ 但并不保证其稳定性。3.用自己的服务器运行其中的py脚本。
 
