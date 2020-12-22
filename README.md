@@ -25,12 +25,12 @@
 - Fork本项目后进入自己的仓库，点击你的仓库右上角的 Settings，找到 Secrets
     <details>
    <summary> 如何Fork本项目？</summary>
-   注册或登陆您的github账号，访问<https://github.com/Closty/chaoxing>进入github的本项目页面中，点击右上角的Fork按钮，如图所示。
+   注册或登陆您的github账号，访问<https://github.com/kuilei0926/xixunyun>进入github的本项目页面中，点击右上角的Fork按钮，如图所示。
    
-   ![Fork本项目][7]
+   ![Fork本项目]https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/Snipaste_2020-12-21_21-03-24.png
    
    </details>
--  fork后进入你自己的仓库并在setting配置您的超星账号信息
+-  fork后进入你自己的仓库并在setting配置您的习讯云账号信息
     <details>
    <summary> 如何配置？</summary>
    1.首先进入自己的仓库（前提您已经登陆账号）
@@ -119,16 +119,6 @@ python脚本在`chaoxing/cx.py`文件中，其中第12—34行为配置区域，
 
 [mkdir700](https://github.com/mkdir700)
 
-## 其他项目推荐
-
-| 项目地址                                                | 开发语言   | 备注                                           |
-| ------------------------------------------------------- | ---------- | ---------------------------------------------- |
-| https://github.com/mkdir700/chaoxing_auto_sign          | Python     |  超星学习通自动签到脚本&多用户多任务&API      |
-| https://github.com/Wzb3422/auto-sign-chaoxing           | TypeScript | 超星学习通自动签到，梦中刷网课       |
-| https://github.com/Huangyan0804/AutoCheckin             | Python     | 学习通自动签到，支持手势，二维码，位置，拍照等 |
-| https://github.com/aihuahua-522/chaoxing-testforAndroid | Java       | 学习通（超星）自动签到               |
-| https://github.com/yuban10703/chaoxingsign              | Python     | 超星学习通自动签到                   |
-
 
 
 ## 紧急通知
@@ -138,7 +128,6 @@ python脚本在`chaoxing/cx.py`文件中，其中第12—34行为配置区域，
 由于本项目被大量fork并启动actions功能，占用github官方服务器大量资源。部分用户反映无法签到，actions功能被禁止等问题。但是大部分用户仍然正常可以使用；解决方法：1.使用使用Travis Ci运行。学业繁忙，不予教程。2.请访问我的服务器 https://cx.clost.net 但并不保证其稳定性。（目前源码臃肿，修改删减后上传）3.用自己的服务器运行其中的py脚本。
 
 
-[7]: https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/3749713206.png
 [1]: https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/3207755264.jpg
 [2]:https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/437025077.jpg
 [3]:https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/3185006214.jpg
