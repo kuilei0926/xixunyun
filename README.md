@@ -1,18 +1,16 @@
-## 介绍
-<img src="https://s1.ax1x.com/2020/04/26/JRuNrR.png" width = "500" height = "300" alt="github实现云签到" align=center />
 
 ### 前言
-为了让同学们更加认真、更加专注听课，而不去用手机签到花费大量时间、耗费大量精力，特此在[原脚本](https://github.com/mkdir700/chaoxing_auto_sign)中开发升级，请自行合理使用！挂科请不要找我，谢谢合作！请点击下方View all of README.md了解更多。
+为了让同学们更加认真、更加专注听课，而不去用手机签到花费大量时间、耗费大量精力，请自行合理使用！请点击下方View all of README.md了解更多。
 
-本项目支持学习通任何形式的签到（包括二维码签到、手势签到等），如果是位置签到也可以自定义位置，如果是拍照签到，请自认倒霉，因为默认是黑色照片，自定义照片还在等待开发中。
+本项目支持习讯云的签到，可以自定义位置。
 
 本脚本最大的不同应该就是基于github action运行，所以并不需要服务器、不需要服务器、不需要服务器同样也不需要掌握任何python的相关设置，你所需要准备的就是一个github账号以及一个耐而不烦的心。傻瓜式的操作却可以解决你最大的痛苦。
 
 ### 特点
-1、基于原先作者强大的脚本，本项目支持任何形式的学习通签到。<br>
+1、本项目支持任何形式的习讯云签到。<br>
 2、基于server酱使得签到成功时会将签到信息发送至你的微信。<br>
 2、无需挂在任何服务器上，只需要点几下，让github自动为你签到。<br>
-3、使用强大的GitHub actions功能，实现无服务器实时监控您的学习通签到。<br>
+3、使用强大的GitHub actions功能，实现无服务器实时监控您的习讯云签到。<br>
 4、无需掌握任何编程知识，强大的后端后端已做好，您仅需点击几下。
 
 
@@ -35,7 +33,7 @@
 	
    ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222092434.png)
    <br><br><br>
-   2.点击chaoxing字样的项目也就是刚刚fork后的项目
+   2.点击xixunyun字样的项目也就是刚刚fork后的项目
    
    ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222092541.png)
    <br><br><br>
@@ -49,13 +47,13 @@
    <br><br><br>
    依次添加以下所有name以及value。<br>
     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉ <br>Name:<code>USER</code><br>
-	Value：<code>填写你的超星账户，最好为11位的手机号</code><br>
+	Value：<code>填写你的习讯云账号密码和学校ID</code><br>
    ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>SIGN_GPS</code><br>
-     Value：<code>填写你的超星密码</code><br>
+     Value：<code>填写签到的GPS坐标</code><br>
     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>ADDRESS_NAME</code><br>
-     Value：<code>填写你的schoolid</code>#如果CHAOXING_USERNAME中的Value填写的是手机号，则本处填写'None'<br>
+     Value：<code>签到地址名字<br>
      ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>SCKEY</code><br>
      Value：<code>填写你的server酱SCKEY码，以SCU开头</code>#申请地址http://sc.ftqq.com/3.version  <br>
@@ -90,15 +88,11 @@
 
 ## 配置说明
 - 配置自动执行时间
-时间配置在`chaoxing/.github/workflows/cxworker.yml`文件中 第九行    `- cron: '* * * * *'`
+时间配置在`xixunyun/.github/workflows/sign.yml`文件中 第九行    `- cron: '* * * * *'`
 默认：每5-6分钟自动执行签到脚本（github有时间延迟与相应限制），你也可以通过 `Push` 操作手动触发执行。
 如需自定义时间，请配合[cron表达在线生成器](https://cron.clost.net "cron表达在线生成器")使用
-- 配置python脚本
-python脚本在`chaoxing/cx.py`文件中，其中第12—34行为配置区域，如需自己的服务器运行更改含有`os.environ`的相关参数即可。 
-- 配置位置签到
-进入`chaoxing/cx.py`修改225行`'address': '中国',`的`中国`为你想显示的位置；修改227行`'clientip': '0.0.0.0',`的`0.0.0.0`为你想显示的[ip地址](https://www.ip138.com/ "ip地址")。
-- 配置拍照签到
-目前无法配置，默认纯黑色照片，请等待更新。
+
+
 
 ## 关于
 本项目基于https://github.com/mkdir700/chaoxing_auto_sign
@@ -120,5 +114,5 @@ python脚本在`chaoxing/cx.py`文件中，其中第12—34行为配置区域，
 
 请一定要根据配置说明配置计划时间；防止被判定滥用。
 <br>
-由于本项目被大量fork并启动actions功能，占用github官方服务器大量资源。部分用户反映无法签到，actions功能被禁止等问题。但是大部分用户仍然正常可以使用；解决方法：1.使用使用Travis Ci运行。学业繁忙，不予教程。2.请访问我的服务器 https://cx.clost.net 但并不保证其稳定性。（目前源码臃肿，修改删减后上传）3.用自己的服务器运行其中的py脚本。
+由于本项目被大量fork并启动actions功能，占用github官方服务器大量资源。部分用户反映无法签到，actions功能被禁止等问题。但是大部分用户仍然正常可以使用；解决方法：1.使用使用Travis Ci运行。学业繁忙，不予教程。2.请访问我的服务器 https://cx.clost.net 但并不保证其稳定性。3.用自己的服务器运行其中的py脚本。
 
