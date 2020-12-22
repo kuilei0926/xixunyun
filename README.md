@@ -25,7 +25,7 @@
    <summary> 如何Fork本项目？</summary>
    注册或登陆您的github账号，访问<https://github.com/kuilei0926/xixunyun>进入github的本项目页面中，点击右上角的Fork按钮，如图所示。
    
-   ![Fork本项目]![https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/Snipaste_2020-12-21_21-03-24.png]
+   ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/Snipaste_2020-12-21_21-03-24.png)
    
    </details>
 -  fork后进入你自己的仓库并在setting配置您的习讯云账号信息
@@ -33,38 +33,35 @@
    <summary> 如何配置？</summary>
    1.首先进入自己的仓库（前提您已经登陆账号）
 	
-   ![E19D60FD6823769D2822C93960835D01.jpg][3]
+   ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222092434.png)
    <br><br><br>
    2.点击chaoxing字样的项目也就是刚刚fork后的项目
    
-   ![41CA3BC4C95CAE8D7F8FB3A05B816CB0.jpg][4]
+   ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222092541.png)
    <br><br><br>
    3.点击setting进入设置界面
    
-   ![711234FE886728474A5326E42A06A40E.jpg][5]
+   ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222092707.png)
    <br><br><br>
    4.点击secrets后点击add a new secret
    
-   ![3AB6B127331F5CCE552730FACDA680A3.jpg][6]
+   ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222092844.png)
    <br><br><br>
    依次添加以下所有name以及value。<br>
-    ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉ <br>Name:<code>CHAOXING_USERNAME</code><br>
+    ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉ <br>Name:<code>USER</code><br>
 	Value：<code>填写你的超星账户，最好为11位的手机号</code><br>
    ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
-     Name：<code>CHAOXING_PASSWORD</code><br>
+     Name：<code>SIGN_GPS</code><br>
      Value：<code>填写你的超星密码</code><br>
     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
-     Name：<code>CHAOXING_SCHOOL</code><br>
+     Name：<code>ADDRESS_NAME</code><br>
      Value：<code>填写你的schoolid</code>#如果CHAOXING_USERNAME中的Value填写的是手机号，则本处填写'None'<br>
      ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
-     Name：<code>CHAOXING_SERVEROR</code><br>
-     Value：<code>填写True或者False</code>#True代表使用微信提醒，False代表不使用<br>
-     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
-     Name：<code>CHAOXING_SERVER</code><br>
+     Name：<code>SCKEY</code><br>
      Value：<code>填写你的server酱SCKEY码，以SCU开头</code>#申请地址http://sc.ftqq.com/3.version  <br>
       ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>配置完后如下图所示
 
-   ![3ABA6F49DE5D7DB3144B14FC9A7F1809.jpg][2]
+   ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222093054.png)
    
     </details>
 - 设置好环境变量后点击你的仓库上方的 Actions 选项，会打开一个如下的页面，点击 `I understand...` 按钮确认在 Fork 的仓库上启用 GitHub Actions 。
@@ -125,10 +122,3 @@ python脚本在`chaoxing/cx.py`文件中，其中第12—34行为配置区域，
 <br>
 由于本项目被大量fork并启动actions功能，占用github官方服务器大量资源。部分用户反映无法签到，actions功能被禁止等问题。但是大部分用户仍然正常可以使用；解决方法：1.使用使用Travis Ci运行。学业繁忙，不予教程。2.请访问我的服务器 https://cx.clost.net 但并不保证其稳定性。（目前源码臃肿，修改删减后上传）3.用自己的服务器运行其中的py脚本。
 
-
-[1]: https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/3207755264.jpg
-[2]:https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/437025077.jpg
-[3]:https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/3185006214.jpg
-[4]:https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/977504155.jpg
-[5]:https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/1888532943.jpg
-[6]:https://cdn.jsdelivr.net/gh/closty/tuchuang/usr/uploads/2020/04/3351341396.jpg
