@@ -8,7 +8,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: 27 1 * * *
+    - cron: 0 1 * * *
       
 jobs:
   build:
@@ -34,5 +34,4 @@ jobs:
           SIGN_GPS:  ${{ secrets.SIGN_GPS }}
           ADDRESS_NAME:  ${{ secrets.ADDRESS_NAME }}  
           SCKEY: ${{ secrets.SCKEY }}  
-          TZ: Asia/Shanghai
 
