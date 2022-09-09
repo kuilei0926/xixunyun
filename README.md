@@ -48,16 +48,16 @@
    依次添加以下所有name以及value。<br>
     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉ <br>
      Name:<code>USER</code><br>
-     Value：<code>填写你的习讯云账号密码和学校ID,用空格或者空行分开</code><br>
+     Value：<code>填写你的习讯云账号密码和学校ID,用空格或者空行分开 例：【123456789 abc123】</code><br>
    ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>SIGN_GPS</code><br>
-     Value：<code>填写签到的GPS坐标</code><br>
+     Value：<code>填写签到的GPS坐标 例：【[116.000000,40.000000]】</code><br>
     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>ADDRESS_NAME</code><br>
-     Value：<code>签到地址名字</code><br>
+     Value：<code>签到地址名字 例：【腾讯大厦】</code><br>
     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>SCKEY</code><br>
-     Value：<code>填写你的server酱SCKEY码，以SCU开头</code>#申请地址http://sc.ftqq.com/3.version  <br>
+     Value：<code>填写你的server酱SCKEY码，以SCU开头</code>#申请地址[https://sct.ftqq.com/sendkey](https://sct.ftqq.com/sendkey)  <br>
       ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>配置完后如下图所示
 
    ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222093054.png)<br>
