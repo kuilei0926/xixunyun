@@ -57,7 +57,7 @@
      Value：<code>签到地址名字 例：【腾讯大厦】</code><br>
     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>SCKEY</code><br>
-     Value：<code>填写你的server酱SCKEY码，以SCU开头</code>#申请地址[https://sct.ftqq.com/sendkey](https://sct.ftqq.com/sendkey)  <br>
+     Value：<code>填写你的server酱SCKEY码，以SCT开头</code>#申请地址[https://sct.ftqq.com/sendkey](https://sct.ftqq.com/sendkey)  <br>
       ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>配置完后如下图所示
 
    ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222093054.png)<br>
