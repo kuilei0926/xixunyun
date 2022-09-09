@@ -2,7 +2,7 @@ import requests
 import json
 import os
 
-# 配置开始
+# 配置开始 
 user = os.environ["USER"]
 account = user.split( )[0] # 账号
 password = user.split( )[1] # 密码
