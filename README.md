@@ -69,6 +69,7 @@
     </details>
 - 设置好环境变量后点击你的仓库上方的 Actions 选项，会打开一个如下的页面，点击 `I understand...` 按钮确认在 Fork 的仓库上启用 GitHub Actions 。
 - 最后在你这个 Fork 的仓库内随便改点什么（比如给 README 文件删掉或者增加几个字符）提交一下手动触发一次 GitHub Actions 就可以了 **（重要！！！测试发现在 Fork 的仓库上 GitHub Actions 的定时任务不会自动执行，必须要手动触发一次后才能正常工作）** 。
+	![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220909181245.png)
    <details>
    <summary> 如何随意修改README文件？</summary>
    
