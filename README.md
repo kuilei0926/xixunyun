@@ -51,7 +51,7 @@
      Value：<code>填写你的习讯云账号密码和学校ID,用空格或者空行分开 例：【123456789 abc123】</code><br>
    ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>SIGN_GPS</code><br>
-     Value：<code>填写签到的GPS坐标 例：【[116.000000,40.000000]】</code><br>
+     Value：<code>填写签到的GPS坐标 例：【116.000000,40.000000】</code><br>
     ┉┉ ∞ ∞ ┉┉┉┉ ∞ ∞ ┉┉┉<br>
      Name：<code>ADDRESS_NAME</code><br>
      Value：<code>签到地址名字 例：【腾讯大厦】</code><br>
