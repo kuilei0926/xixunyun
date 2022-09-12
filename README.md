@@ -71,8 +71,9 @@
 - 最后在你这个 Fork 的仓库内随便改点什么（比如给 README 文件删掉或者增加几个字符）提交一下手动触发一次 GitHub Actions 就可以了 **（重要！！！测试发现在 Fork 的仓库上 GitHub Actions 的定时任务不会自动执行，必须要手动触发一次后才能正常工作）** 。
 	
    <summary> 如何随意修改README文件？</summary>
-   ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220909181245.png)
+
    <details>
+      ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220909181245.png)
    1.进入你的仓库并进入code界面,点击笔字的按钮进入编写
     ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222095234.png)
    2.在代码框随意编写或删减以达到改变代码的效果，随后点击提交commit，当然如果可以让说明书更精美欢迎来pull
