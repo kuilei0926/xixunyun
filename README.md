@@ -75,8 +75,11 @@
 
    <details>
    1.进入你的仓库并进入code界面,点击笔字的按钮进入编写
+	   
     ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222095234.png)
+	   
    2.在代码框随意编写或删减以达到改变代码的效果，随后点击提交commit，当然如果可以让说明书更精美欢迎来pull
+	   
     ![image](https://raw.githubusercontent.com/kuilei0926/xixunyun/main/img/QQ%E6%88%AA%E5%9B%BE20201222095347.png)
 
    </details>
